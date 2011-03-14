@@ -1,8 +1,12 @@
 /**
- * object‚Ì˜AŒ‹
- * @param {Object} dst —v‘f‚ð’Ç‰Á‚³‚ê‚éObject
- * @param {Object} src ’Ç‰Á‚·‚é—v‘f‚ð‚à‚ÂObject
- * @returns {Object} —v‘f‚ð’Ç‰Á‚³‚ê‚½dst
+ * concatenate objects
+ * ex)
+ * var a = {aProp:"ap"};
+ * var b = {bProp:"bp"};
+ * concatObjects(a, b);
+ * for(var i in a) { console.log(a[i]); } // ap,bp
+ * @param {Object} dst Object
+ * @param {Object} src Object
  */
 function concatObjects(dst, src) {
     if (typeof(src)!= 'object'
@@ -14,5 +18,4 @@ function concatObjects(dst, src) {
             dst[elm] = src[elm];
         }
     }
-    return dst;
 }
